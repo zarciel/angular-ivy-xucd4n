@@ -6,11 +6,16 @@ import { AppComponent } from "./app.component";
 import { HelloComponent } from "./hello.component";
 import { UserComponent } from "./user/user.component";
 import { UserService } from "./user/Shared/user.service";
-import { UserDetailsComponent } from './user/user-details/user-details.component';
-
+import { UserDetailsComponent } from "./user/user-details/user-details.component";
+import { appRoutes } from "./routes";
 @NgModule({
-  imports: [BrowserModule, FormsModule],
-  declarations: [AppComponent, HelloComponent, UserComponent, UserDetailsComponent],
+  imports: [BrowserModule, FormsModule, RouterModule.forRoot(appRoutes)],
+  declarations: [
+    AppComponent,
+    HelloComponent,
+    UserComponent,
+    UserDetailsComponent
+  ],
   providers: [UserService],
   bootstrap: [AppComponent]
 })
