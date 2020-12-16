@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from "@angular/core";
-import {UserService} from './Shared/user.service';
+import { UserService } from "./Shared/user.service";
 
 @Component({
   selector: "app-user",
@@ -7,7 +7,9 @@ import {UserService} from './Shared/user.service';
   styleUrls: ["./user.component.css"]
 })
 export class UserComponent implements OnInit {
-  constructor(private userService = UserService) {}
+  constructor(private userService = UserService) {
+    this.events = userService.getEvents();
+  }
 
   public listUser: user[];
 
@@ -20,7 +22,7 @@ export class UserComponent implements OnInit {
   ngOnInit() {
     this.listUser = new Array<user>();
     this.listUser.push(new user("nciolas", "zarciel", "fr"));
-    this.events = this.userService.getEvents();
+  //  this.events = this.userService.();
   }
 
   onAddUser() {
@@ -56,8 +58,6 @@ export class UserComponent implements OnInit {
   /*numberOfRow() {
     this.listUser.length;
   }*/
-
-
 }
 
 class user {
