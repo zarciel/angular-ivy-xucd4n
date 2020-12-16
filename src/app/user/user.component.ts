@@ -7,9 +7,7 @@ import { UserService } from "./Shared/user.service";
   styleUrls: ["./user.component.css"]
 })
 export class UserComponent implements OnInit {
-  constructor(private userService = UserService) {
-    this.events = userService.getEvents();
-  }
+  constructor(private userService: UserService) {}
 
   public listUser: user[];
 
@@ -22,7 +20,7 @@ export class UserComponent implements OnInit {
   ngOnInit() {
     this.listUser = new Array<user>();
     this.listUser.push(new user("nciolas", "zarciel", "fr"));
-  //  this.events = this.userService.();
+    this.events = this.userService.getEvents();
   }
 
   onAddUser() {
