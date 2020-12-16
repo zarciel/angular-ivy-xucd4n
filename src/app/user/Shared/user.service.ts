@@ -2,19 +2,19 @@ import { Injectable } from "@angular/core";
 
 @Injectable()
 export class UserService {
-  getEvents() {
+  public getEvents() {
     return EVENTS;
   }
 }
 const EVENTS = [
   {
-    name = "Bond",
-    nickname = "007",
-    country = "UK"
+    name: "Bond",
+    nickname: "007",
+    country: "UK"
   },
   {
-    name = "Arnold",
-    nickname = "Terminator",
-    country = "USA"
+    name: "Arnold",
+    nickname: "Terminator",
+    country: "USA"
   }
 ];

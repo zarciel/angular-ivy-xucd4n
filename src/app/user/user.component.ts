@@ -20,7 +20,7 @@ export class UserComponent implements OnInit {
   ngOnInit() {
     this.listUser = new Array<user>();
     this.listUser.push(new user("nciolas", "zarciel", "fr"));
-    events = userService.getEvents();
+    this.events = this.userService.getEvents();
   }
 
   onAddUser() {
