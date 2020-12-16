@@ -10,7 +10,7 @@ export class UserDetailsComponent implements OnInit {
   constructor(private userService: UserService) { }
 event:any;
   ngOnInit() {
-        this.event = this.userService.getEvents();
+        this.event = this.userService.getEvent(1);
   }
 
 }
