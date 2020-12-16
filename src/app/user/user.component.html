@@ -10,3 +10,10 @@
 </ul>
 <footer>Number of row : {{this.listUser.length}}</footer>
 <p>Position : {{ item }} </p>
+
+<p> List of user 2 </p>
+<ul>
+	<li *ngFor="let event of events">
+		{{event.name}} - {{event.nickname}} - {{event.country}}
+	</li>
+</ul>

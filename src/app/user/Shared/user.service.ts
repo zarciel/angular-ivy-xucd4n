@@ -1,21 +1,20 @@
-import {Injectable} from '@angular/core'
+import { Injectable } from "@angular/core";
 
 @Injectable()
-export class UserService{
-  getEvents(){
-    return EVENTS
+export class UserService {
+  getEvents() {
+    return EVENTS;
   }
 }
-
-const EVENT [
+const EVENTS = [
   {
-    name = 'Bond',
-    nickname = '007',
-    country = 'UK',
+    name = "Bond",
+    nickname = "007",
+    country = "UK"
   },
   {
-        name = 'Arnold',
-    nickname = 'Terminator',
-    country = 'USA',
-  };
-]
+    name = "Arnold",
+    nickname = "Terminator",
+    country = "USA"
+  }
+];
