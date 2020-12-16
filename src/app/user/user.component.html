@@ -1,0 +1,12 @@
+<h1>User</h1>
+
+<button (click)="onAddUser()">Add User</button>
+<button (click)="onGetUserName()">Get User name </button>
+<p>Liste des utilisateurs :</p>
+<ul>
+	<li *ngFor="let user of listUser">
+		{{user.name}} - {{user.nickname}} - {{user.country}}
+	</li>
+</ul>
+<footer>Number of row : {{this.listUser.length}}</footer>
+<p>Position : {{ item }} </p>
