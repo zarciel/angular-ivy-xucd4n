@@ -7,7 +7,7 @@ import { HelloComponent } from "./hello.component";
 import { UserComponent } from "./user/user.component";
 import { UserService } from "./user/Shared/user.service";
 import { UserDetailsComponent } from "./user/user-details/user-details.component";
-import { appRoutes } from "./routes";
+import { appRoutes } from "./route";
 @NgModule({
   imports: [BrowserModule, FormsModule, RouterModule.forRoot(appRoutes)],
   declarations: [
