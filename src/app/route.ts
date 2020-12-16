@@ -4,7 +4,7 @@ import { UserDetailsComponent } from "./user/user-details/user-details.component
 import { UserComponent } from "./user/user.component";
 
 export const appRoutes: Routes = [
-  { path: "my-app", component: AppComponent },
+  { path: "user", component: AppComponent },
   { path: "user/:id", component: UserDetailsComponent },
-  { path: "", redirectTo: "/my-app", pathMatch: "full" }
+  { path: "", redirectTo: "/user", pathMatch: "full" }
 ];
